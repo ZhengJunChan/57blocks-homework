@@ -1,0 +1,78 @@
+$itemColor: #3f76f1;
+$grey: rgb(214, 214, 214);
+
+.time-piker {
+  text-align: center;
+  
+  &-header {
+    text-align: right;
+    padding: 10px;
+    border: 1px solid $grey;
+    border-bottom: 0;
+  }
+  &-footer {
+    // text-align: right;
+    padding: 10px;
+    border: 1px solid $grey;
+    border-top: 0;
+  }
+
+  .moving {
+    background-color: hsla(221, 86%, 60%, 0.6);
+  }
+
+  .selected {
+    background-color: $itemColor;
+  }
+
+  .button {
+    color: $itemColor;
+    cursor: pointer;
+    & + .button {
+      margin-left: 10px;
+    }
+  }
+}
+
+.time-selector{
+  width: 100%;
+  th, td {
+    border-left: 1px solid $grey;
+    border-top: 1px solid $grey;
+
+    &:last-child {
+      border-right: 1px solid $grey;
+    }
+  }
+  tr:last-child {
+    td {
+      border-bottom: 1px solid $grey;
+    }
+  }
+  .hour-column {
+    width: 3.6%;
+  }
+}
+
+.time-piker-footer {
+  position: relative;
+  
+  .selected-text-row {
+    display: flex;
+    
+    &-name {
+      width: 13.6%;
+      text-align: center;
+    }
+    
+    &-text {
+      flex: 1;
+      text-align: left;
+    }
+  }
+
+  .button-group {
+    position: absolute;
+    right: 10px;
+  }
+}
